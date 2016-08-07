@@ -11,6 +11,34 @@
         <script src='js/index.js'></script>
         <script>
             $(document).ready(function(){
+
+                var eventsData = [
+                    {
+                        title: 'js权威指南47-54',
+                        start: '2016-08-01'
+                    },
+                    {
+                        title: 'js权威指南54-56',
+                        start: '2016-08-02'
+                    },
+                    {
+                        title: 'js权威指南56-59',
+                        start: '2016-08-03'
+                    },
+                    {
+                        title: 'js权威指南59-64',
+                        start: '2016-08-04'
+                    },
+                    {
+                        title: 'js权威指南64-78',
+                        start: '2016-08-05'
+                    },
+                    {
+                        title: 'js权威指南78-90',
+                        start: '2016-08-06'
+                    }
+                ];
+
                 $('#calendar').fullCalendar({
                     weekends: true, //隐藏周末选项
                     header:{
@@ -21,32 +49,7 @@
                     editable: true, //定义事件是否可编辑
                     eventLimit: true, //定义事件过多是否显示more
                     selectable: false, //鼠标点击或拖拽是否高亮当前日期
-                    events: [
-                        {
-                            title: 'js权威指南47-54',
-                            start: '2016-08-01'
-                        },
-                        {
-                            title: 'js权威指南54-56',
-                            start: '2016-08-02'
-                        },
-                        {
-                            title: 'js权威指南56-59',
-                            start: '2016-08-03'
-                        },
-                        {
-                            title: 'js权威指南59-64',
-                            start: '2016-08-04'
-                        },
-                        {
-                            title: 'js权威指南64-78',
-                            start: '2016-08-05'
-                        },
-                        {
-                            title: 'js权威指南78-90',
-                            start: '2016-08-06'
-                        }
-                    ],
+                    events: eventsData,
                     eventClick: function(event, jsEvent, view) {// 事件的click事件
 
                         alert('Event: ' + event.title);
